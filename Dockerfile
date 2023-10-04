@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM ubuntu:latest
+FROM python:3.9-slim
 
 
 # Set the working directory to /app
@@ -10,7 +10,6 @@ COPY . /app
 
 # Define environment variable
 ENV NAME World
-RUN pip install numpy
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
